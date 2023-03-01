@@ -1,4 +1,6 @@
-# Git TEMPLATE project
+# Todos App project
+
+[https://todos-app-andryushik.netlify.app/](https://todos-app-andryushik.netlify.app/)
 
 ## Available Scripts
 
