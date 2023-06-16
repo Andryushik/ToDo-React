@@ -18,13 +18,21 @@
 .todoIcon {
   font-size: 1.8rem;
   margin-right: 10px;
-  color: teal;
+  color: rgb(0, 128, 128);
+}
+
+.todo:hover {
+  cursor: grab;
+}
+
+.todo:active {
+  cursor: grabbing;
 }
 
 .completedTodo {
-  background-color: unset;
-  border-color: gray;
-  color: gray;
+  background-color: transparent;
+  border-color: rgb(123, 123, 123);
+  color: rgb(127, 127, 127);
 }
 
 .todo.completedTodo .todoIcon,

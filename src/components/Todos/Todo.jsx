@@ -1,10 +1,30 @@
+import { Reorder } from 'framer-motion';
 import { RiTodoFill, RiDeleteBin2Line } from 'react-icons/ri';
 import { FaCheck } from 'react-icons/fa';
 import styles from './Todo.module.css';
 
+const variants = {
+  initial: {
+    opacity: 0,
+    height: 0.5,
+  },
+  animate: {
+    opacity: 1,
+    height: 'auto',
+  },
+  transition: {
+    duration: 0.5,
+  },
+  whileDrag: {
+    scale: 1.05,
+  },
+};
+
 function Todo({ todo, deleteTodo, toggleTodo }) {
   return (
-    <div
+    <Reorder.Item
+      value={todo}
+      {...variants}
       className={`${styles.todo} ${
         todo.isCompleted ? styles.completedTodo : ''
       }`}
@@ -19,7 +39,7 @@ function Todo({ todo, deleteTodo, toggleTodo }) {
         className={styles.checkIcon}
         onClick={() => toggleTodo(todo.id)}
       />
-    </div>
+    </Reorder.Item>
   );
 }
 

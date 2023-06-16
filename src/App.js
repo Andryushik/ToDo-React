@@ -55,6 +55,7 @@ function App() {
       )}
       <TodoList
         todos={todos}
+        setTodos={setTodos}
         deleteTodo={deleteTodoHandler}
         toggleTodo={toggleTodoHandler}
       />
