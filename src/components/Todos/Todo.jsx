@@ -6,11 +6,15 @@ import styles from './Todo.module.css';
 const variants = {
   initial: {
     opacity: 0,
-    height: 0.5,
+    height: 1,
   },
   animate: {
     opacity: 1,
     height: 'auto',
+  },
+  exit: {
+    opacity: 0,
+    height: 1,
   },
   transition: {
     duration: 0.5,

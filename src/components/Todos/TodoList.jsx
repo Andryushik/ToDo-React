@@ -6,8 +6,8 @@ function TodoList({ todos, setTodos, deleteTodo, toggleTodo }) {
   return (
     <div className={styles.todoListContainer}>
       {!todos.length && <h2>Todo list is empty</h2>}
-      <AnimatePresence>
-        <Reorder.Group axis="y" values={todos} onReorder={setTodos}>
+      <Reorder.Group axis="y" values={todos} onReorder={setTodos}>
+        <AnimatePresence>
           {todos.map((todo) => (
             <Todo
               key={todo.id}
@@ -16,8 +16,8 @@ function TodoList({ todos, setTodos, deleteTodo, toggleTodo }) {
               toggleTodo={toggleTodo}
             />
           ))}
-        </Reorder.Group>
-      </AnimatePresence>
+        </AnimatePresence>
+      </Reorder.Group>
     </div>
   );
 }
